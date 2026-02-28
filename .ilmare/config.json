@@ -1,0 +1,12 @@
+{
+  "enabled": true,
+  "phases": {
+    "RESEARCH": { "tools_whitelist": ["Read", "Glob", "Grep", "Bash", "WebFetch"], "max_steps": 20 },
+    "PLAN":     { "tools_whitelist": ["Read", "Glob", "Grep"],                     "max_steps": 10 },
+    "EXECUTE":  { "tools_whitelist": ["Read", "Write", "Edit", "Bash", "Glob", "Grep"], "max_steps": 50 },
+    "QA":       { "tools_whitelist": ["Read", "Bash", "Glob", "Grep"],             "max_steps": 15 },
+    "DONE":     { "tools_whitelist": [],                                                  "max_steps": 1  }
+  },
+  "budget": { "max_total_steps": 100, "max_wall_seconds": 1200 },
+  "doom_loop": { "repeat_threshold": 3, "window_size": 10 }
+}
